@@ -1,0 +1,77 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Montserrat:wght@300;400;500;600;700&display=swap");
+
+@theme {
+  /* ── Paleta Boca Chueca (tokens del sitio web) ── */
+  --color-background:                #131313;
+  --color-surface:                   #131313;
+  --color-surface-dim:               #131313;
+  --color-surface-bright:            #393939;
+  --color-surface-container-lowest:  #0e0e0e;
+  --color-surface-container-low:     #1c1b1b;
+  --color-surface-container:         #201f1f;
+  --color-surface-container-high:    #2a2a2a;
+  --color-surface-container-highest: #353534;
+  --color-on-surface:                #e5e2e1;
+  --color-on-surface-variant:        #d5c3bf;
+  --color-outline:                   #9d8d8a;
+  --color-outline-variant:           #504441;
+
+  --color-primary:                   #ecbbb0;
+  --color-on-primary:                #472821;
+  --color-primary-container:         #2b110b;
+
+  --color-secondary:                 #ffb4aa;
+  --color-on-secondary:              #670406;
+  --color-secondary-container:       #8e241e;
+  --color-on-secondary-container:    #ffa499;
+
+  --color-tertiary:                  #eac349;
+  --color-on-tertiary:               #3c2f00;
+  --color-tertiary-container:        #cca830;
+
+  --color-success:                   #4ade80;
+  --color-success-container:         #14321a;
+
+  --color-error:                     #ffb4ab;
+  --color-error-container:           #93000a;
+
+  /* ── Tipografía ── */
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-sans:    "Montserrat", system-ui, sans-serif;
+}
+
+@layer base {
+  html { color-scheme: dark; scroll-behavior: smooth; }
+
+  body {
+    background-color: #131313;
+    color: #e5e2e1;
+    font-family: "Montserrat", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5 {
+    font-family: "Playfair Display", Georgia, serif;
+  }
+
+  #root {
+    width: 100%;
+    min-height: 100svh;
+    display: flex;
+  }
+
+  ::-webkit-scrollbar       { width: 5px; height: 5px; }
+  ::-webkit-scrollbar-track { background: #0e0e0e; }
+  ::-webkit-scrollbar-thumb { background: #504441; border-radius: 3px; }
+}
+
+@layer utilities {
+  .block-shadow-red   { box-shadow: 3px 3px 0 0 #8e241e; }
+  .block-shadow-gold  { box-shadow: 3px 3px 0 0 #eac349; }
+  .block-shadow-black { box-shadow: 3px 3px 0 0 #000; }
+
+  .font-display { font-family: "Playfair Display", Georgia, serif; }
+  .font-sans    { font-family: "Montserrat", system-ui, sans-serif; }
+}
