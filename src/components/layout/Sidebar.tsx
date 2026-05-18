@@ -3,7 +3,7 @@ import {
   LayoutDashboard, CalendarCheck, UtensilsCrossed,
   Beer, Star, Settings, ChevronLeft, ChevronRight,
   ClipboardList, Lightbulb, BarChart2, FlaskConical,
-  LogOut, ExternalLink,
+  LogOut, ExternalLink, FileText,
 } from 'lucide-react'
 import { useAuthStore } from '../../store/authStore'
 import { useTaskStore }  from '../../store/taskStore'
@@ -102,7 +102,8 @@ export function Sidebar({ open, setOpen }: SidebarProps) {
         {/* Divisor */}
         <div className="my-3 mx-4 border-t border-[#504441]/50" />
 
-        <NavItem to="/settings" icon={Settings} label="Ajustes" open={open} />
+        <NavItem to="/spec"     icon={FileText}  label="Spec Proyecto" open={open} />
+        <NavItem to="/settings" icon={Settings} label="Ajustes"       open={open} />
       </nav>
 
       {/* Footer */}

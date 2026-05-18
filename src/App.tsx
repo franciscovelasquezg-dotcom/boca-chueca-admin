@@ -10,6 +10,7 @@ import { InboxIdeas }       from './pages/InboxIdeas'
 import { MarketResearch }   from './pages/MarketResearch'
 import { RecipeLab }        from './pages/RecipeLab'
 import { Settings }         from './pages/Settings'
+import { SpecEditor }       from './pages/SpecEditor'
 
 const Stub = ({ name }: { name: string }) => (
   <div className="flex flex-col items-center justify-center h-64 gap-3">
@@ -22,10 +23,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Pública */}
         <Route path="/login" element={<Login />} />
-
-        {/* Protegidas */}
         <Route element={<ProtectedRoute><AdminLayout /></ProtectedRoute>}>
           <Route index              element={<Dashboard />}     />
           <Route path="reservas"    element={<Reservas />}      />
@@ -36,10 +34,9 @@ export default function App() {
           <Route path="inbox"       element={<InboxIdeas />}    />
           <Route path="mercado"     element={<MarketResearch />}/>
           <Route path="recetas"     element={<RecipeLab />}     />
+          <Route path="spec"        element={<SpecEditor />}    />
           <Route path="settings"    element={<Settings />}      />
         </Route>
-
-        {/* Fallback */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </BrowserRouter>
