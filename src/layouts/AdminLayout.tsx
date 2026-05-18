@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Outlet, useLocation, useNavigate } from 'react-router-dom'
+import { Outlet, useLocation } from 'react-router-dom'
 import { Menu, Bell } from 'lucide-react'
 import { Sidebar }       from '../components/layout/Sidebar'
 import { useIdeaStore }  from '../store/ideaStore'
